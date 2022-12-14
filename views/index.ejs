@@ -3,12 +3,29 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><%= message %></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <p><%= message %></p>
+  <form method="GET">
+    <input type="text" id="input" name="szem_szin">
+    <input type="submit" value="Keresés" id="button">
+  </form>
+    <table>
+      <tr>
+        <td class="szem">Szem szín</td>
+        <td class="suly">Súly</td>
+      </tr>
+      <% for (let m of macskak.sort(function(a, b){return b.suly-a.suly})) { %>
+        <tr>
+          <td class="szem"><%= m.szem_szin %></td>
+          <td class="suly"><%= m.suly %></td>
+        </tr>
+      <% } %>
+    </table>
+    <a href="cats/new">
+      <button>Felvétel</button>
+    </a>
 </body>
 </html>

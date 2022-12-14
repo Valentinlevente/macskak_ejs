@@ -1,0 +1,32 @@
+table{
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+}
+td{
+  border: solid black 1px;
+}
+
+.szem{
+  width: 300px;
+  text-align: right;
+  padding: 5px 10px 5px 10px;
+}
+.suly{
+  width: 50px;
+  text-align: center;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#input{
+  width: 250px;
+  height: 24px;
+}
+#button{
+  width: 100px;
+  height: 30px;
+}
